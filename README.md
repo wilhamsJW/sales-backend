@@ -73,6 +73,8 @@ Addressed Aspects
 
 - `nest g controller user` (crating a controller user called)
 
+- `nest g service user` (crating a service user called)
+
 <h3>Basic explanation of the architecture in NestJS</h3>
 
 _O que são interfaces e DTOS dentro do módulo user?_
