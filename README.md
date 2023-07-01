@@ -22,9 +22,9 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+Description
 
-# Sistema de Gerenciamento de Vendas
+Sistema de Gerenciamento de Vendas
 
 Este projeto tem como objetivo criar um sistema completo de loja online utilizando tecnologias modernas de desenvolvimento web. O sistema consiste em uma API RESTful no backend, desenvolvida utilizando o framework Nest.js, para gerenciar as operações de compra e venda na loja online. Também é utilizado o TypeScript para tipagem de dados e melhoria da qualidade do código.
 
@@ -32,17 +32,17 @@ O sistema aborda aspectos importantes como autenticação e autorização, geren
 
 Ao final deste projeto, foram adquiridas habilidades necessárias para criar um sistema de loja online completo, utilizando tecnologias modernas de desenvolvimento web. Este projeto é ideal para desenvolvedores web que desejam aprimorar suas habilidades em tecnologias modernas, escrever código de alta qualidade e garantir a qualidade do código por meio de testes unitários.
 
-## Recursos Utilizados
+Recursos Utilizados
 
 - Backend:
   - Framework: Nest.js
   - Linguagem: TypeScript
 
-## Funcionalidades Implementadas
+Funcionalidades Implementadas
 
 - API RESTful para gerenciamento das operações de compra e venda.
 
-## Aspectos Abordados
+Aspectos Abordados
 
 - Autenticação e autorização.
 - Gerenciamento de sessões.
@@ -52,31 +52,31 @@ Ao final deste projeto, foram adquiridas habilidades necessárias para criar um 
 - Boas práticas de desenvolvimento web.
 - Testes unitários.
 
-# Commands Used (Project with NestJS)
+ Commands Used (Project with NestJS)
 - `npm i -g @nestjs/cli`
 
 - `nest new sales-backend`
 
-## Installation
+Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+Running the app
 
 ```bash
-# development
+ development
 $ npm run start
 
-# watch mode
+ watch mode
 $ npm run start:dev
 
-# production mode
+ production mode
 $ npm run start:prod
 ```
 
-## Test
+Test
 
 ```bash
 # unit tests
@@ -89,11 +89,11 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
+Stay in touch
 
 - Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
