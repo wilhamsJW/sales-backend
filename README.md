@@ -81,6 +81,12 @@ _Interfaces_ - é os dados em si, aquilo q salva no banco de dados, mas se trata
 
 _DTO_ - é um dataTransfer, dados que serão transferidos, por exemplo a senha do usuário, a gente não salva senha diretamente no banco de dados pq se um dia o banco for hackeado o hacker terá acesso a senha, então enviamos a senha ao DTO e ele irá criptografar a senha e enviar ao banco de dados a senha criptografada.
 
+_A pasta User se trata de um módulo criado, esse módulo é pré criado com `nest g module user`_ - Nele temos todas as informações sobre o usuário, dentro dele temos as DTOs, as interfaces e controllers
+
+_Controllers_ - São o local onde fica os verbos http, criamos um controller com `nest g controller user`, de forma automática ele será importado no app.module.ts como está dentro do arquivo
+
+_Pasta dtos_ - Local que ficará a interface, os tipos de dados que será recebido
+
 
 <h3>Installation</h3>
 
