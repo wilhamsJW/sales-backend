@@ -32,13 +32,14 @@ O sistema aborda aspectos importantes como autenticação e autorização, geren
 
 Ao final deste projeto, foram adquiridas habilidades necessárias para criar um sistema de loja online completo, utilizando tecnologias modernas de desenvolvimento web. Este projeto é ideal para desenvolvedores web que desejam aprimorar suas habilidades em tecnologias modernas, escrever código de alta qualidade e garantir a qualidade do código por meio de testes unitários.
 
-Recursos Utilizados
+<h2>Recursos Utilizados</h2>
+
 
 - Backend:
   - Framework: Nest.js
   - Linguagem: TypeScript
 
-Funcionalidades Implementadas
+<h2>Funcionalidades Implementadas</h2>
 
 - API RESTful para gerenciamento das operações de compra e venda.
 
@@ -52,7 +53,7 @@ Aspectos Abordados
 - Boas práticas de desenvolvimento web.
 - Testes unitários.
 
- Commands Used (Project with NestJS)
+<h2>Commands Used (Project with NestJS)</h2>
 - `npm i -g @nestjs/cli`
 
 - `nest new sales-backend`
