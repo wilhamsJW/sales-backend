@@ -73,7 +73,16 @@ Addressed Aspects
 
 - `nest g controller user` (crating a controller user called)
 
-Installation
+<h3>Basic explanation of the architecture in NestJS</h3>
+
+_O que são interfaces e DTOS dentro do módulo user?_
+_Interfaces_ - é os dados em si, aquilo q salva no banco de dados, mas se trata de dados especificos do usuário como suas informações de endereço, telefone dados pessoais, id, password e etc...
+
+
+_DTO_ - é um dataTransfer, dados que serão transferidos, por exemplo a senha do usuário, a gente não salva senha diretamente no banco de dados pq se um dia o banco for hackeado o hacker terá acesso a senha, então enviamos a senha ao DTO e ele irá criptografar a senha e enviar ao banco de dados a senha criptografada.
+
+
+<h3>Installation</h3>
 
 ```bash
 $ npm install
