@@ -24,7 +24,38 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# Sistema de Gerenciamento de Vendas
+
+Este projeto tem como objetivo criar um sistema completo de loja online utilizando tecnologias modernas de desenvolvimento web. O sistema consiste em uma API RESTful no backend, desenvolvida utilizando o framework Nest.js, para gerenciar as operações de compra e venda na loja online. Também é utilizado o TypeScript para tipagem de dados e melhoria da qualidade do código.
+
+O sistema aborda aspectos importantes como autenticação e autorização, gerenciamento de sessões, validação de dados, segurança, escalabilidade e performance. Foram aplicadas boas práticas de desenvolvimento web, incluindo a escrita de testes unitários e a criação de um código limpo, testável e de fácil manutenção.
+
+Ao final deste projeto, foram adquiridas habilidades necessárias para criar um sistema de loja online completo, utilizando tecnologias modernas de desenvolvimento web. Este projeto é ideal para desenvolvedores web que desejam aprimorar suas habilidades em tecnologias modernas, escrever código de alta qualidade e garantir a qualidade do código por meio de testes unitários.
+
+## Recursos Utilizados
+
+- Backend:
+  - Framework: Nest.js
+  - Linguagem: TypeScript
+
+## Funcionalidades Implementadas
+
+- API RESTful para gerenciamento das operações de compra e venda.
+
+## Aspectos Abordados
+
+- Autenticação e autorização.
+- Gerenciamento de sessões.
+- Validação de dados.
+- Segurança.
+- Escalabilidade e performance.
+- Boas práticas de desenvolvimento web.
+- Testes unitários.
+
+# Commands Used (Project with NestJS)
+- `npm i -g @nestjs/cli`
+
+- `nest new sales-backend`
 
 ## Installation
 
@@ -67,7 +98,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 - Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
