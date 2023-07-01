@@ -81,10 +81,13 @@ Running the app
 
 ```bash
  development
-$ npm run start
+$ npm run start 
+run the system once
 
  watch mode
 $ npm run start:dev
+Run the system whenever changes are saved
+
 
  production mode
 $ npm run start:prod
