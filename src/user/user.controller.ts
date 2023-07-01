@@ -1,10 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body , Controller, Post } from '@nestjs/common';
+import { CreateUserDto } from './dtos/createUser.dto'
 
 @Controller('user')
 export class UserController {
-
-    @Get()
-    async getAllUsers() {
-        return JSON.stringify({ name: 'sucesso!' })
-    }
+    @Post()
+    async createUser(@Body() createUser: CreateUserDto) {
+        return {
+            ...createUser,
+            password: 'criptografada' // dessa forma o usuário não ver a senha retornada
+        }
+    } 
 }
