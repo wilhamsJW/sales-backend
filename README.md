@@ -71,6 +71,8 @@ Addressed Aspects
 
 - `nest g module user` (crating a module user called)
 
+- `nest g controller user` (crating a controller user called)
+
 Installation
 
 ```bash
