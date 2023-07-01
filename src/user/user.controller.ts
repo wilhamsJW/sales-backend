@@ -1,6 +1,7 @@
-import { Body , Controller, Post } from '@nestjs/common';
+import { Body , Controller, Post, Get } from '@nestjs/common';
 import { CreateUserDto } from './dtos/createUser.dto'
 import { UserService } from './user.service'
+import { User } from './interfaces/user.interface'
 
 @Controller('user')
 export class UserController {
@@ -16,9 +17,15 @@ export class UserController {
 
     // BodyCreateUser - dados do body da requisição
     @Post()
-    async createUser(@Body() BodyCreateUser: CreateUserDto) {        
+    async createUser(@Body() BodyCreateUser: CreateUserDto): Promise<User> {        
         return this.userService.createUser(BodyCreateUser)
+        // Aqui estamos enviando os dados enviados pelo front e enviando para o service que irá armazenalos
         // com this eu acesso as propriedades declaradas da minha classe, essas estão dentro do meu contructor
 
     } 
+
+    @Get()
+    async getAllUser(): Promise<User[]> {
+        return this.userService.getAllUser()
+    }
 }
