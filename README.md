@@ -54,6 +54,7 @@ Aspectos Abordados
 - Testes unitários.
 
 <h2>Commands Used (Project with NestJS)</h2>
+
 - `npm i -g @nestjs/cli`
 
 - `nest new sales-backend`
