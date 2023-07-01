@@ -63,7 +63,7 @@ Addressed Aspects
 - Boas práticas de desenvolvimento web.
 - Testes unitários.
 
-<h2>Commands Used (Project with NestJS)</h2>
+<h2>Commands Used (Project with NestJS) [https://docs.nestjs.com/](Document)</h2>
 
 - `npm i -g @nestjs/cli` (Install NestJS CLI)
 
@@ -74,6 +74,10 @@ Addressed Aspects
 - `nest g controller user` (crating a controller user called)
 
 - `nest g service user` (crating a service user called)
+
+- `npm i bcrypt` (Encryption password)
+
+- `npm i -D @types/bcrypt` (-D - only dev)
 
 <h3>Basic explanation of the architecture in NestJS</h3>
 
