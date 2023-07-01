@@ -9,6 +9,7 @@ import * as bcrypt from 'bcrypt';
 export class UserService {
 
     private users: User[] = []
+
     async createUser(createUserDto: CreateUserDto): Promise<User> {
         // Foi adicionado esses dois pontos -> : após o parâmetro pq indica o que é que eu quero que essa função retorne, nesse caso quero retornar o User que
         // está na interface, porém não sei se isso vai retornar de fato, então o JS e o nest reconhece isso com uma Promise e pede pra usar
@@ -23,6 +24,7 @@ export class UserService {
             id: this.users.length + 1,
             password
         };
+        // insere os dados na minha propriedade privada users, a partir daqui posso enviar ele para qq banco de dados que necessitar
         this.users.push(user) // usando o this pq o this acessa o dado dessa classe que não está dentro dessa função
 
         return {
@@ -30,5 +32,9 @@ export class UserService {
             password,
             id: 12
         }
+    }
+
+    async getAllUser(): Promise<User[]> {
+        return this.users
     }
 }
