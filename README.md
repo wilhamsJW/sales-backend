@@ -24,6 +24,16 @@
 
 <h2>Description</h2>
 
+Sales Management System
+
+This project aims to create a complete online store system using modern web development technologies. The system consists of a RESTful API on the backend, developed using the Nest.js framework, to manage the buying and selling operations in the online store. TypeScript is also used for data typing and code quality improvement.
+
+The system addresses important aspects such as authentication and authorization, session management, data validation, security, scalability, and performance. Good web development practices have been applied, including writing unit tests and creating clean, testable, and maintainable code.
+
+By the end of this project, the necessary skills to create a complete online store system using modern web development technologies have been acquired. This project is ideal for web developers who want to enhance their skills in modern technologies, write high-quality code, and ensure code quality through unit testing.
+
+<h2>Description translation</h2>
+
 Sistema de Gerenciamento de Vendas
 
 Este projeto tem como objetivo criar um sistema completo de loja online utilizando tecnologias modernas de desenvolvimento web. O sistema consiste em uma API RESTful no backend, desenvolvida utilizando o framework Nest.js, para gerenciar as operações de compra e venda na loja online. Também é utilizado o TypeScript para tipagem de dados e melhoria da qualidade do código.
@@ -32,18 +42,18 @@ O sistema aborda aspectos importantes como autenticação e autorização, geren
 
 Ao final deste projeto, foram adquiridas habilidades necessárias para criar um sistema de loja online completo, utilizando tecnologias modernas de desenvolvimento web. Este projeto é ideal para desenvolvedores web que desejam aprimorar suas habilidades em tecnologias modernas, escrever código de alta qualidade e garantir a qualidade do código por meio de testes unitários.
 
-<h2>Recursos Utilizados</h2>
+<h2>Used resources</h2>
 
 
 - Backend:
   - Framework: Nest.js
   - Linguagem: TypeScript
 
-<h2>Funcionalidades Implementadas</h2>
+<h2>Implemented Features</h2>
 
 - API RESTful para gerenciamento das operações de compra e venda.
 
-Aspectos Abordados
+Addressed Aspects
 
 - Autenticação e autorização.
 - Gerenciamento de sessões.
@@ -55,9 +65,11 @@ Aspectos Abordados
 
 <h2>Commands Used (Project with NestJS)</h2>
 
-- `npm i -g @nestjs/cli`
+- `npm i -g @nestjs/cli` (Install NestJS CLI)
 
-- `nest new sales-backend`
+- `nest new sales-backend` (create NestJS project)
+
+- `nest g module user` (crating a module user called)
 
 Installation
 
