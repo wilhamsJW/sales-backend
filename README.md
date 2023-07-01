@@ -89,6 +89,8 @@ _Controllers_ - São o local onde fica os verbos http, criamos um controller com
 
 _Pasta dtos_ - Local que ficará a interface, os tipos de dados que será recebido
 
+_Arquivo use.service_ - se trata da resposta que o servidor irá dar, colocamos aqui regras de negócio dos dados
+
 
 <h3>Installation</h3>
 
