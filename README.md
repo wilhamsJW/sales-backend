@@ -121,6 +121,12 @@ DB_DATABASE=salesOnline
 
 [Doc - Configurar DB no NestJS](https://docs.nestjs.com/techniques/database)
 
+<h4>Commands Migration</h4>
+
+_As migrations (migrações) são uma técnica usada em projetos de desenvolvimento de software para gerenciar alterações no esquema de banco de dados de forma controlada_
+
+- `npx typeorm migration:create ./src/migration/create_table_user`
+
 <h4>Basic explanation of the architecture in NestJS</h4>
 
 _O que são interfaces e DTOS dentro do módulo user?_
@@ -140,7 +146,6 @@ _Arquivo use.service_ - se trata da resposta que o servidor irá dar, colocamos 
 
 _O que é o arquivo User.module dentro de uma entidade? como exemplo temos a entidade user_
 O UserModule é um módulo do NestJS que agrupa e organiza os componentes relacionados ao recurso de usuário (user) em sua aplicação. Ele é responsável por fornecer a estrutura básica para a funcionalidade de usuário, como a configuração do controlador (controller), serviço (service) e entidade (entity) relacionados aos usuários.
-
 O UserModule é importante porque atua como um ponto central de coordenação e injeção de dependências entre o controlador, serviço e outros componentes relacionados aos usuários. Ele fornece uma estrutura organizada para trabalhar com o recurso de usuário na aplicação, facilitando o desenvolvimento, teste e manutenção do código relacionado aos usuários.
 
 <h4>Installation</h4>
