@@ -39,7 +39,8 @@ export class UserService {
         return this.userRepository.save({
             msg: 'User with sucess saved!',
             ...createUserDto,
-            password: passwordHashed
+            password: passwordHashed,
+            type_user: 1
         })
     }
 
