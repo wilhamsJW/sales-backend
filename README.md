@@ -93,11 +93,12 @@ Addressed Aspects
 
 - `npm i --save @nestjs/config` [Instalação de confi do env](https://docs.nestjs.com/techniques/configuration)
 
-Após isso foi adicinado uma config dentro do app.modulem q é esta:
+Após isso foi adicinado uma config dentro do app.module q é esta:
 
 ```ConfigModule.forRoot({
       envFilePath: '.env.development.local',
-    })```
+    })
+```
 
 De acordo com a documentação isso serve para que o NestJS enxergue o dotenv e possa fazer alterações de acordo com a necessidade do projeto, tbm podemos usar o dotenv construindo manualmente
 
@@ -107,7 +108,8 @@ De acordo com a documentação isso serve para que o NestJS enxergue o dotenv e 
 DB_USERNAME=postgres
 DB_PASSWORD=mysecretpassword
 DB_PORT=5432
-DB_DATABASE=salesOnline```
+DB_DATABASE=salesOnline
+```
 
 <h3>Basic explanation of the architecture in NestJS</h3>
 
