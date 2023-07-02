@@ -63,7 +63,7 @@ Addressed Aspects
 - Boas práticas de desenvolvimento web.
 - Testes unitários.
 
-<h2>Commands Used (Project with NestJS) (https://docs.nestjs.com/)[Document]</h2>
+<h2>Commands Used (Project with NestJS)</h2> [Document](https://docs.nestjs.com/)
 
 - `npm i -g @nestjs/cli` (Install NestJS CLI)
 
