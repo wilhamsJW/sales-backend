@@ -103,7 +103,7 @@ ConfigModule.forRoot({
 
 De acordo com a documentação isso serve para que o NestJS enxergue o dotenv e possa fazer alterações de acordo com a necessidade do projeto, tbm podemos usar o dotenv construindo manualmente
 
-<h3>Foi inserido isso no arquivo dotEnv:</h3> 
+<h4>Foi inserido isso no arquivo dotEnv:</h4> 
 
 ```
 DB_HOST=localhost
@@ -113,7 +113,7 @@ DB_PORT=5432
 DB_DATABASE=salesOnline
 ```
 
-<h3>Basic explanation of the architecture in NestJS</h3>
+<h4>Basic explanation of the architecture in NestJS</h4>
 
 _O que são interfaces e DTOS dentro do módulo user?_
 _Interfaces_ - é os dados em si, aquilo q salva no banco de dados, mas se trata de dados especificos do usuário como suas informações de endereço, telefone dados pessoais, id, password e etc...
@@ -130,7 +130,7 @@ _Pasta dtos_ - Local que ficará a interface, os tipos de dados que será recebi
 _Arquivo use.service_ - se trata da resposta que o servidor irá dar, colocamos aqui regras de negócio dos dados
 
 
-<h3>Installation</h3>
+<h4>Installation</h4>
 
 ```bash
 $ npm install
