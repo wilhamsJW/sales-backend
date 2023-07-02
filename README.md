@@ -95,7 +95,7 @@ Addressed Aspects
 
 Após isso foi adicinado uma config dentro do app.modulem q é esta:
 
-```    ConfigModule.forRoot({
+```ConfigModule.forRoot({
       envFilePath: '.env.development.local',
     })```
 
