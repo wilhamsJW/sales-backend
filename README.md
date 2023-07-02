@@ -137,6 +137,11 @@ _Pasta dtos_ - Local que ficará a interface, os tipos de dados que será recebi
 
 _Arquivo use.service_ - se trata da resposta que o servidor irá dar, colocamos aqui regras de negócio dos dados
 
+_O que é o arquivo User.module dentro de uma entidade? como exemplo temos a entidade user_
+
+O UserModule é um módulo do NestJS que agrupa e organiza os componentes relacionados ao recurso de usuário (user) em sua aplicação. Ele é responsável por fornecer a estrutura básica para a funcionalidade de usuário, como a configuração do controlador (controller), serviço (service) e entidade (entity) relacionados aos usuários.
+
+O UserModule é importante porque atua como um ponto central de coordenação e injeção de dependências entre o controlador, serviço e outros componentes relacionados aos usuários. Ele fornece uma estrutura organizada para trabalhar com o recurso de usuário na aplicação, facilitando o desenvolvimento, teste e manutenção do código relacionado aos usuários.
 
 <h4>Installation</h4>
 
