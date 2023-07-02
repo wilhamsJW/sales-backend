@@ -113,6 +113,14 @@ DB_PORT=5432
 DB_DATABASE=salesOnline
 ```
 
+<h4>Install TypeORM</h4>
+
+[DOC NestJS TypeORM](https://docs.nestjs.com/recipes/sql-typeorm)
+
+- `npm install --save typeorm pg @nestjs/typeorm` (colocado pg pq estou usando o postegres se fosse outro db seria outro nome)
+
+[Doc - Configurar DB no NestJS](https://docs.nestjs.com/techniques/database)
+
 <h4>Basic explanation of the architecture in NestJS</h4>
 
 _O que são interfaces e DTOS dentro do módulo user?_
