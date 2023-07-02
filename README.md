@@ -105,7 +105,8 @@ De acordo com a documentação isso serve para que o NestJS enxergue o dotenv e 
 
 <h3>Foi inserido isso no arquivo dotEnv:</h3> 
 
-```DB_HOST=localhost
+```
+DB_HOST=localhost
 DB_USERNAME=postgres
 DB_PASSWORD=mysecretpassword
 DB_PORT=5432
