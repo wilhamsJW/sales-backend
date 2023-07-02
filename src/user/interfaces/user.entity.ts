@@ -1,5 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
+/** Criando linhas e coluna usando o TypeORM */
+
 @Entity({ name: 'user' })
 export class UserEntity {
     @PrimaryGeneratedColumn('rowid')
