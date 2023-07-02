@@ -84,7 +84,7 @@ Addressed Aspects
 <h4>Install DataBase</h4> 
 
 [Document Docker Postegres](https://hub.docker.com/_/postgres)
-(o docket já havia sido instalado na máquina, para depois dá esse comando de docker pull)
+(O docker já havia sido instalado na máquina, para depois dá esse comando de docker pull)
 
 - `docker pull postgres` (install postegres)
 
@@ -94,9 +94,11 @@ Addressed Aspects
 - `npm i --save @nestjs/config` [Instalação de confi do env](https://docs.nestjs.com/techniques/configuration)
 
 Após isso foi adicinado uma config dentro do app.modulem q é esta:
+
 ```    ConfigModule.forRoot({
       envFilePath: '.env.development.local',
     })```
+
 De acordo com a documentação isso serve para que o NestJS enxergue o dotenv e possa fazer alterações de acordo com a necessidade do projeto, tbm podemos usar o dotenv construindo manualmente
 
 <h3>Foi inserido isso no arquivo dotEnv:</h3> 
