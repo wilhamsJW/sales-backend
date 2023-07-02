@@ -63,7 +63,7 @@ Addressed Aspects
 - Boas práticas de desenvolvimento web.
 - Testes unitários.
 
-<h2>Commands Used (Project with NestJS) [https://docs.nestjs.com/](Document)</h2>
+<h2>Commands Used (Project with NestJS) (https://docs.nestjs.com/)[Document]</h2>
 
 - `npm i -g @nestjs/cli` (Install NestJS CLI)
 
@@ -78,6 +78,32 @@ Addressed Aspects
 - `npm i bcrypt` (Encryption password)
 
 - `npm i -D @types/bcrypt` (-D - only dev)
+
+<h4>Install DataBase</h4> 
+
+[Document Docker Postegres](https://hub.docker.com/_/postgres)
+(o docket já havia sido instalado na máquina, para depois dá esse comando de docker pull)
+
+- `docker pull postgres` (install postegres)
+
+- `docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres` (inicia uma instancia do postgres dentro do ambiente docker onde visualiza no docker e no pgAdmin4)
+(-p 5432:5432 - adicionei isso aqui pq se trata da porta é onde colocamos essa porta no PGadmin, e onte tem password, coloque sua senha de preferencia e ela será usada no pgAdmin)
+
+- `npm i --save @nestjs/config` [Instalação de confi do env](https://docs.nestjs.com/techniques/configuration)
+
+Após isso foi adicinado uma config dentro do app.modulem q é esta:
+```    ConfigModule.forRoot({
+      envFilePath: '.env.development.local',
+    })```
+De acordo com a documentação isso serve para que o NestJS enxergue o dotenv e possa fazer alterações de acordo com a necessidade do projeto, tbm podemos usar o dotenv construindo manualmente
+
+<h3>Foi inserido isso no arquivo dotEnv:</h3> 
+
+```DB_HOST=localhost
+DB_USERNAME=postgres
+DB_PASSWORD=mysecretpassword
+DB_PORT=5432
+DB_DATABASE=salesOnline```
 
 <h3>Basic explanation of the architecture in NestJS</h3>
 
