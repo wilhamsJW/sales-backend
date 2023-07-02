@@ -127,7 +127,8 @@ _O que são interfaces e DTOS dentro do módulo user?_
 _Interfaces_ - é os dados em si, aquilo q salva no banco de dados, mas se trata de dados especificos do usuário como suas informações de endereço, telefone dados pessoais, id, password e etc...
 
 
-_DTO_ - é um dataTransfer, dados que serão transferidos, por exemplo a senha do usuário, a gente não salva senha diretamente no banco de dados pq se um dia o banco for hackeado o hacker terá acesso a senha, então enviamos a senha ao DTO e ele irá criptografar a senha e enviar ao banco de dados a senha criptografada.
+_DTO_ - é um dataTransfer, (é uma técnica usada em várias arquiteturas de softwares para transferir dados) dados que serão transferidos, por exemplo a senha do usuário, a gente não salva senha diretamente no banco de dados pq se um dia o banco for hackeado o hacker terá acesso a senha, então enviamos a senha ao DTO e ele irá fazera a transferencia desses dados e irá criptografar a senha (isso acontece no service) e enviar ao banco de dados a senha criptografada.
+Em resumo, ele fornece uma estrutura clara e bem definida para transportar os dados de forma segura e eficiente.
 
 _A pasta User se trata de um módulo criado, esse módulo é pré criado com `nest g module user`_ - Nele temos todas as informações sobre o usuário, dentro dele temos as DTOs, as interfaces e controllers
 
@@ -138,7 +139,6 @@ _Pasta dtos_ - Local que ficará a interface, os tipos de dados que será recebi
 _Arquivo use.service_ - se trata da resposta que o servidor irá dar, colocamos aqui regras de negócio dos dados
 
 _O que é o arquivo User.module dentro de uma entidade? como exemplo temos a entidade user_
-
 O UserModule é um módulo do NestJS que agrupa e organiza os componentes relacionados ao recurso de usuário (user) em sua aplicação. Ele é responsável por fornecer a estrutura básica para a funcionalidade de usuário, como a configuração do controlador (controller), serviço (service) e entidade (entity) relacionados aos usuários.
 
 O UserModule é importante porque atua como um ponto central de coordenação e injeção de dependências entre o controlador, serviço e outros componentes relacionados aos usuários. Ele fornece uma estrutura organizada para trabalhar com o recurso de usuário na aplicação, facilitando o desenvolvimento, teste e manutenção do código relacionado aos usuários.
