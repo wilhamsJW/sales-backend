@@ -123,10 +123,16 @@ DB_DATABASE=salesOnline
 
 <h4>Commands Migration</h4>
 
+OBS: _O uso de migrações oferece um processo estruturado e controlado para gerenciar as alterações no esquema do banco de dados, tornando o desenvolvimento e a manutenção do banco de dados mais eficientes, colaborativos e rastreáveis. Podemos reverte facilmente algo errado q subimos ao banco garantindo assim a agilidade em resolver problemas._
+
 _As migrations (migrações) são uma técnica usada em projetos de desenvolvimento de software para gerenciar alterações no esquema de banco de dados de forma controlada_
 
 - `npx typeorm migration:create ./src/migration/create_table_user`
 (create_table_user se trata do nome da tabela q queremos criar, no caso só o user se fosse uma table city ficaria assim: create_table_city)
+
+- `npx typeorm migration:create ./src/migration/insert-in-state` (cria uma nova migração no TypeORM com o nome "insert-in-state", que pode ser usada para aplicar alterações no esquema do banco de dados.)
+
+- `npx typeorm migration:create ./src/migration/alter_table_state`  (cria uma nova migração no TypeORM com o nome "alter_table_state", que pode ser usada para aplicar alterações no esquema do banco de dados e assim por diante.)
 
 <h4>Basic explanation of the architecture in NestJS</h4>
 
