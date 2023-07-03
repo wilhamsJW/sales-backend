@@ -126,6 +126,7 @@ DB_DATABASE=salesOnline
 _As migrations (migrações) são uma técnica usada em projetos de desenvolvimento de software para gerenciar alterações no esquema de banco de dados de forma controlada_
 
 - `npx typeorm migration:create ./src/migration/create_table_user`
+(create_table_user se trata do nome da tabela q queremos criar, no caso só o user se fosse uma table city ficaria assim: create_table_city)
 
 <h4>Basic explanation of the architecture in NestJS</h4>
 
