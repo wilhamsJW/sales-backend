@@ -38,3 +38,5 @@ export class CreateTableUser1688337962156 implements MigrationInterface {
     }
 
 }
+
+//  O comando DROP TABLE é usado para remover completamente uma tabela do banco de dados
