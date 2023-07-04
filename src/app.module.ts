@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { StateModule } from './state/state.module';
+import { CityModule } from './city/city.module';
+import { AdressModule } from './adress/adress.module';
 
 /**
  * Em um determinado momento adicionei uma chave dentro do TypeOrmModule.forRoot chamada synchronize: true
@@ -30,7 +33,10 @@ import { TypeOrmModule } from '@nestjs/typeorm'
       entities: [`${__dirname}/**/*.entity{.js,.ts}`],
       migrations: [`${__dirname}/migration/{.ts,*.js}`],
       migrationsRun: true
-    })
+    }),
+    StateModule,
+    CityModule,
+    AdressModule
   ],
   controllers: [],
   providers: [],
