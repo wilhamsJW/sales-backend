@@ -91,7 +91,7 @@ Addressed Aspects
 - `docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres` (inicia uma instancia do postgres dentro do ambiente docker onde visualiza no docker e no pgAdmin4)
 (-p 5432:5432 - adicionei isso aqui pq se trata da porta é onde colocamos essa porta no PGadmin, e onte tem password, coloque sua senha de preferencia e ela será usada no pgAdmin)
 
-- `npm i --save @nestjs/config` [Instalação de confi do env](https://docs.nestjs.com/techniques/configuration)
+- `npm i --save @nestjs/config` [Instalação de config do env](https://docs.nestjs.com/techniques/configuration)
 
 Após isso foi adicinado uma config dentro do app.module q é esta:
 
@@ -133,6 +133,16 @@ _As migrations (migrações) são uma técnica usada em projetos de desenvolvime
 - `npx typeorm migration:create ./src/migration/insert-in-state` (cria uma nova migração no TypeORM com o nome "insert-in-state", que pode ser usada para aplicar alterações no esquema do banco de dados.)
 
 - `npx typeorm migration:create ./src/migration/alter_table_state`  (cria uma nova migração no TypeORM com o nome "alter_table_state", que pode ser usada para aplicar alterações no esquema do banco de dados e assim por diante.)
+
+- `npx typeorm migration:create ./src/migration/insert-in-city`
+
+<h4>Creating Enitity</h4>
+
+- `nest g module state` (Gera um novo módulo chamado state)
+
+- `nest g module city`
+
+- `nest g module adress`
 
 <h4>Basic explanation of the architecture in NestJS</h4>
 
