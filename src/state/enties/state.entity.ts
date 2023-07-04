@@ -2,7 +2,7 @@ import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateCol
 
 /** Criando linhas e coluna usando o TypeORM */
 
-@Entity({ name: 'city' })
+@Entity({ name: 'state' })
 export class StateEntity {
     @PrimaryGeneratedColumn('rowid')
     id: number;
