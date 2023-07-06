@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm'
 import { StateModule } from './state/state.module';
 import { CityModule } from './city/city.module';
 import { AdressModule } from './adress/adress.module';
+import { CacheModule } from './cache/cache.module';
 
 /**
  * Em um determinado momento adicionei uma chave dentro do TypeOrmModule.forRoot chamada synchronize: true
@@ -36,7 +37,8 @@ import { AdressModule } from './adress/adress.module';
     }),
     StateModule,
     CityModule,
-    AdressModule
+    AdressModule,
+    CacheModule
   ],
   controllers: [],
   providers: [],
