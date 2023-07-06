@@ -154,6 +154,22 @@ _As migrations (migrações) são uma técnica usada em projetos de desenvolvime
 
 - `nest g service city`
 
+<h4>Cache</h4> 
+
+[DOC cache](https://docs.nestjs.com/techniques/caching)
+
+Personalizar cache
+Todos os dados armazenados em cache têm seu próprio tempo de expiração ( TTL ). Para personalizar os valores padrão, passe o objeto de opções para o register()método.
+
+```
+CacheModule.register({
+  ttl: 5, // seconds
+  max: 10, // maximum number of items in cache
+});
+```
+
+- `npm install @nestjs/cache-manager cache-manager`
+
 <h4>Basic explanation of the architecture in NestJS</h4>
 
 _O que são interfaces e DTOS dentro do módulo user?_
