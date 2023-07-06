@@ -15,5 +15,4 @@ export class AlterTableState1688400383374 implements MigrationInterface {
                 drop uf
         `)        
     }
-
 }
