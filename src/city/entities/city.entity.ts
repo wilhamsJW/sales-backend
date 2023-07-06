@@ -10,6 +10,9 @@ export class CityEntity {
     @Column({ name: 'state_id', nullable: false })
     stateId: number;
 
+    @Column({ name: 'state_id_aux', nullable: false })
+    stateIdAux: number;
+
     @Column({ name: 'name', nullable: false })
     name: string;
 
