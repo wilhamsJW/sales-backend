@@ -150,6 +150,10 @@ _As migrations (migrações) são uma técnica usada em projetos de desenvolvime
 
 - `nest g service state`
 
+- `nest g controller city`
+
+- `nest g service city`
+
 <h4>Basic explanation of the architecture in NestJS</h4>
 
 _O que são interfaces e DTOS dentro do módulo user?_
