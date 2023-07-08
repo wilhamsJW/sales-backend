@@ -44,7 +44,6 @@ Ao final deste projeto, foram adquiridas habilidades necessárias para criar um 
 
 <h2>Used resources</h2>
 
-
 - Backend:
   - Framework: Nest.js
   - Linguagem: TypeScript
@@ -169,6 +168,14 @@ CacheModule.register({
 ```
 
 - `npm install @nestjs/cache-manager cache-manager`
+
+<h4>Validation</h4> 
+
+(Esta validação é extremamente útil pois retira vários ifs de validação do código, deixando ocódigo mais limpo, melhorando a manutençãoe e legibilidade)
+
+[Validação dos dados do NestJS](https://docs.nestjs.com/techniques/validation#using-the-built-in-validationpipe)
+
+- `npm i --save class-validator class-transformer`
 
 <h4>Basic explanation of the architecture in NestJS</h4>
 
