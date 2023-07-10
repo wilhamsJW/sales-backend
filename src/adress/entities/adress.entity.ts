@@ -2,7 +2,7 @@ import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateCol
 
 /** Criando linhas e coluna usando o TypeORM */
 
-@Entity({ name: 'adress' })
+@Entity({ name: 'adress' }) // Este é o nome da tabela e o nome do arquivo deve ser igual o da tabela
 export class AdressEntity {
     @PrimaryGeneratedColumn('rowid')
     id: number;
@@ -14,16 +14,13 @@ export class AdressEntity {
     complement: string;
 
     @Column({ name: 'number' })
-    numberAndress: string;
+    numberAndress: number;
 
     @Column({ name: 'cep', nullable: false })
     cep: string;
 
-    @Column({ name: 'city_id', nullable: false })
-    cityId: string
-
-    @Column({ name: 'type_user', nullable: false })
-    type_user: number
+    @Column({ name: 'city_id' })
+    cityId: number
 
     @CreateDateColumn({ name: 'created_at' })
     createAt: Date;
