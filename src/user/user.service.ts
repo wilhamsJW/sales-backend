@@ -5,6 +5,7 @@ import { UserEntity } from './entities/user.entity';
 import * as bcrypt from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { NotFoundException } from '@nestjs/common/exceptions';
 
 
 @Injectable()
@@ -47,5 +48,19 @@ export class UserService {
     async getAllUser(): Promise<UserEntity[]> {
         //return this.users // usado para retornar uma resposta ao endepoint do get que fica no controller, este users é o de cima que tbm tá comentado
         return this.userRepository.find()
+    }
+
+    async findUserByID(userId: number): Promise<UserEntity> {
+        const user = await this.userRepository.findOne({
+            where: {
+                id: userId
+            }
+        });
+
+        if (!user) {
+            throw new NotFoundException(`Não encontrado este usário ${userId}`)
+        }
+
+        return user
     }
 }
