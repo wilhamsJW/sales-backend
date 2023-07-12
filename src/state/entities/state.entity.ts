@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+import { CityEntity } from 'src/city/entities/city.entity';
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 
 /** Criando linhas e coluna usando o TypeORM */
 
@@ -18,6 +19,9 @@ export class StateEntity {
 
     // @UpdateDateColumn({ name: 'updated_at' })
     // upDateAt: Date;
+
+    @OneToMany(() => CityEntity, (city) => city.cityAndStateRelational)
+    cityAndStateRelational?: CityEntity[]
 }
 
 /**
