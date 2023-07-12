@@ -34,6 +34,14 @@ export class UserController {
     }
 }
 
+
+
+
+
+
+
+//========================================
+
 /**
  * Explicações sobre a função getAllUser():
  * 
