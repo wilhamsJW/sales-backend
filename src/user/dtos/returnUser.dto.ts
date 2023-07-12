@@ -1,3 +1,4 @@
+import { ReturnAddressDto } from "src/adress/dtos/returnAdress.dto";
 import { UserEntity } from "../entities/user.entity"
 
 export class ReturnUserDto {
@@ -7,6 +8,7 @@ export class ReturnUserDto {
     email: string;
     phone: string;
     cpf: string;
+    adresses?: ReturnAddressDto[]
     
     constructor(userEntityAllUsers: UserEntity) {
         this.id = userEntityAllUsers.id;
@@ -14,6 +16,8 @@ export class ReturnUserDto {
         this.email = userEntityAllUsers.email;
         this.phone = userEntityAllUsers.phone;
         this.cpf = userEntityAllUsers.cpf;
+
+        this.adresses = userEntityAllUsers.adresses ? userEntityAllUsers.adresses.map(address => new ReturnAddressDto(address)) : undefined
     }
 }
 
