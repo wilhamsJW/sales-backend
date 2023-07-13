@@ -69,7 +69,18 @@ export class UserService {
             where: {
                 id: userId
             },
-            relations: ['adresses']
+            relations: {
+                adresses: {
+                    city: {}
+                }
+            }
         })
     }
 }
+
+/*************************************************************************************************
+ * relations -> serve para especificar quais relações devem ser carregadas junto com o usuário.  * 
+ * No exemplo, estamos carregando a relação addresses e, dentro dela, a propriedade city.        *
+ * Isso significa que, além dos dados do usuário, também queremos carregar os endereços          *
+ * associados a esse usuário e, para cada endereço, queremos carregar a cidade associada.        *
+ *************************************************************************************************/
