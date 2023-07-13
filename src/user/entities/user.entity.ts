@@ -32,6 +32,14 @@ export class UserEntity {
     @UpdateDateColumn({ name: 'updated_at' })
     upDateAt: Date;
 
-    @OneToMany(() => AdressEntity, (adresses) => adresses.user)
-    adresses?: AdressEntity[]
+    @OneToMany(() => AdressEntity, (adresses) => adresses.user) // adresses.user -> esse .user foi criado lá na adrees.entity e aqui estou enviado dados para ele para que haja a relaçaõ entre dados
+    adresses?: AdressEntity[] // adresses -> é uma chave do meu objeto que irá receber os meus relacionamentos entre tabelas
 }
+
+/**
+ * Vantagem de ter feito relações com One-to-Many e Many-to-One são:
+ * 
+ * A definição dessa relação facilita a navegação entre entidades relacionadas e permite que o ORM 
+ * carregue automaticamente os dados relacionados quando a entidade principal é buscada do banco de dados, 
+ * evitando consultas adicionais para obter os endereços associados ao usuário.
+ */
