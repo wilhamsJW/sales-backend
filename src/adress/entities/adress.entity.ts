@@ -30,13 +30,15 @@ export class AdressEntity {
     @UpdateDateColumn({ name: 'updated_at' })
     upDateAt: Date;
 
-    @ManyToOne(() => UserEntity, (user) => user.adresses)
+    @ManyToOne(() => UserEntity, (user) => user.adresses) // Estou inserindo dados da entidade UserEntity dentro da chave criada lá no user.entity chamada "adresses" e lá dentro do "adresses" terá uma chave criada com o nome "user" que é o nome dessa chave logo abaixo
     @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
     user?: UserEntity
 
-    @ManyToOne(() => CityEntity, (city) => city.adresses)
-    @JoinColumn({ name: 'city_id', referencedColumnName: 'id' })
+    @ManyToOne(() => CityEntity, (city) => city.adresses) // Estou inserindo  dados da entidade CityEntity dentro da chave criada lá no user.entity chamada "adresses" e lá dentro do "adresses" terá uma chave criada com o nome "city" que é o nome dessa chave logo abaixo
+    @JoinColumn({ name: 'city_id', referencedColumnName: 'id' }) 
     city?: CityEntity
+
+    // Com estas duas relações criadas acima eu tenho um array chamado "adresses" na entidade userEntity que irá conter dados do usuário e da cidade fazendo relacionamento sem a necessidade de criar uma nova consulta sql    
 }
 
 /**
@@ -56,7 +58,7 @@ A entidade possui colunas que são mapeadas para os campos correspondentes no ba
 
 @UpdateDateColumn({ name: 'updated_at' }): Decorador que define uma coluna upDateAt que será preenchida automaticamente com a data de atualização do registro no banco de dados. O parâmetro { name: 'updated_at' } especifica o nome da coluna no banco de dados.
 
-Essas são apenas algumas das colunas definidas na entidade. Cada coluna é representada por um decorador @Column que especifica o nome da coluna, tipos de dados e outras opções.
+Essas são apenas algumas das colunas definidas na entidade. Cada coluna é representada por um decorador @ Column que especifica o nome da coluna, tipos de dados e outras opções.
 
 Essa definição de entidade é usada com o TypeORM para realizar operações de mapeamento objeto-relacional (ORM), como criar, consultar, atualizar e excluir registros do banco de dados usando objetos JavaScript.
  */
