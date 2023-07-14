@@ -6,6 +6,7 @@ import { StateModule } from './state/state.module';
 import { CityModule } from './city/city.module';
 import { AdressModule } from './adress/adress.module';
 import { CacheModule } from './cache/cache.module';
+import { AuthModule } from './auth/auth.module';
 
 /**
  * Em um determinado momento adicionei uma chave dentro do TypeOrmModule.forRoot chamada synchronize: true
@@ -38,7 +39,8 @@ import { CacheModule } from './cache/cache.module';
     StateModule,
     CityModule,
     AdressModule,
-    CacheModule
+    CacheModule,
+    AuthModule
   ],
   controllers: [],
   providers: [],
