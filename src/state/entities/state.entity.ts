@@ -9,19 +9,19 @@ export class StateEntity {
     id: number;
 
     @Column({ name: 'name', nullable: false })
-    name: number;
+    name: string;
 
-    @Column({ name: 'uf', nullable: false })
+    @Column({ name: 'uf' })
     uf: number;
 
-    // @CreateDateColumn({ name: 'created_at' })
-    // createAt: Date;
+    @CreateDateColumn({ name: 'created_at' })
+    createAt: Date;
 
-    // @UpdateDateColumn({ name: 'updated_at' })
-    // upDateAt: Date;
+    @UpdateDateColumn({ name: 'updated_at' })
+    upDateAt: Date;
 
-    @OneToMany(() => CityEntity, (city) => city.cityAndStateRelational)
-    cityAndStateRelational?: CityEntity[]
+    @OneToMany(() => CityEntity, (city) => city.nameCityStateRelational)
+    cities?: CityEntity[]
 }
 
 /**
