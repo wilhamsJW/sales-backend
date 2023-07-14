@@ -71,7 +71,9 @@ export class UserService {
             },
             relations: {
                 adresses: {
-                    city: {}
+                    city: {
+                        nameCityStateRelational: true // aqui configuro essa chave para true, ela q está recebendo dados relacionados
+                    }
                 }
             }
         })
