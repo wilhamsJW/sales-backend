@@ -177,7 +177,19 @@ CacheModule.register({
 
 - `npm i --save class-validator class-transformer`
 
-<h4>Basic explanation of the architecture in NestJS</h4>
+<h4>Autenticação</h4>
+
+<h4>Validação de usuários</h4>
+
+[Doc: Autenticaçao de rotas, user, credenciais, JWT etc ](https://docs.nestjs.com/recipes/passport)
+
+- `npm install --save @nestjs/passport passport passport-local`
+
+- ` npm install --save-dev @types/passport-local`
+
+- `nest g module auth`
+
+- `nest g service auth`
 
 _O que são interfaces e DTOS dentro do módulo user?_
 _Interfaces_ - é os dados em si, aquilo q salva no banco de dados, mas se trata de dados especificos do usuário como suas informações de endereço, telefone dados pessoais, id, password e etc...
