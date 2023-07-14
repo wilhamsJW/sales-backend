@@ -27,7 +27,7 @@ export class CityEntity {
     @OneToMany(() => AdressEntity, (adresses) => adresses.city)
     adresses?: AdressEntity[]
 
-    @ManyToOne(() => StateEntity, (state) => state.cityAndStateRelational)
+    @ManyToOne(() => StateEntity, (state) => state.cities)
     @JoinColumn({ name: 'state_id', referencedColumnName: 'id' })
-    cityAndStateRelational?: CityEntity
+    nameCityStateRelational?: StateEntity // coloquei dados da tabela StateEntity dentro de nameCityStateRelational, assim tenho esses dados relacionados
 }
