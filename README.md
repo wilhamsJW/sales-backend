@@ -177,7 +177,13 @@ CacheModule.register({
 
 - `npm i --save class-validator class-transformer`
 
-<h4>Autenticação</h4>
+<h4>Autenticação JWT</h4>
+
+[Doc: passport JWT](https://docs.nestjs.com/recipes/passport)
+
+- `npm install --save @nestjs/jwt passport-jwt`
+
+- `npm install --save-dev @types/passport-jwt`
 
 <h4>Validação de usuários</h4>
 
