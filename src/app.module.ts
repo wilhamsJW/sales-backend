@@ -7,6 +7,9 @@ import { CityModule } from './city/city.module';
 import { AdressModule } from './adress/adress.module';
 import { CacheModule } from './cache/cache.module';
 import { AuthModule } from './auth/auth.module';
+import { RolesGuard } from './guards/roles.guards'; // Importado aqui pq fica global, esse arquivo gerencia as permssões de user, qual tipo de user pode acessar determinada rota, para usar ele basta ver uma referencia em adress.controller.ts
+import { APP_GUARD } from '@nestjs/core'
+import { JwtModule } from '@nestjs/jwt'
 
 /**
  * Em um determinado momento adicionei uma chave dentro do TypeOrmModule.forRoot chamada synchronize: true
@@ -40,10 +43,16 @@ import { AuthModule } from './auth/auth.module';
     CityModule,
     AdressModule,
     CacheModule,
-    AuthModule
+    AuthModule,
+    JwtModule
   ],
   controllers: [],
-  providers: [],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: RolesGuard,
+    }
+  ],
 })
 export class AppModule {}
 
