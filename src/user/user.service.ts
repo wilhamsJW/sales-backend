@@ -41,7 +41,7 @@ export class UserService {
             msg: 'User with sucess saved!',
             ...createUserDto,
             password: passwordHashed,
-            type_user: 1
+            type_user: 1 // aqui define o tipo de user q terá acesso ou privliégios a acesar rotas dentro do projeto, está mockado para teste mas o dono do sistema q deve definir isso
         })
     }
 
