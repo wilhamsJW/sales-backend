@@ -6,10 +6,15 @@ import { ROLES_KEY } from 'src/decorator/role.decorator';
 import { UserType } from 'src/user/enum/user.type.num';
 import { LoginPayload } from '../auth/dtos/loginPayload.dto';
 
+                      /**************************************************************
+                       * Arquivo responsável por verificar quem tem acesso as rotas *
+                       * ************************************************************
+                       */
+
 /** Este arquivo guards consegue ser usado em todas as rotas para gerenciar que tipo de usuário pode acessar determinada rota
  * para usar ele posso ver no adress.controller.ts, mas para usa-lo basta criar um decorator customizado e invocar ele na rota desejada
- * o decorator que estou usando é: @Roles(UserType.User) ele tem um funçao chamada SetMetada() que irá relacinar esses dados e chamará de forma automática
- * a pasta 'guards' invocando o arquivo 'roles.guards' que o mesmo retornará uma promessa como true ou false e esse valor boolena é enxergado pelo NestJS 
+ * o decorator que estou usando é: @Roles(UserType.User) ele tem um funçao chamada SetMetada() que irá relacionar esses dados e chamará de forma automática
+ * a pasta 'guards' invocando o arquivo 'roles.guards' que o mesmo retornará uma promessa como true ou false e esse valor boolean é enxergado pelo NestJS 
  * e ele irá lançar de forma automática uma msg de erro ou deixará o fluxo prosseguir normalmente
  */
 
@@ -24,12 +29,14 @@ export class RolesGuard implements CanActivate {
 
 
     /**
-     * Esta função abaixo está recebendo o usuário permitido, ela consegue visulizar esse dado pela chave ROLES_KEY, e assim irá me retornar um array com 
+     * isAllowedUser -> Esta função abaixo está recebendo o usuário permitido, ela consegue visulizar esse dado pela chave ROLES_KEY, e assim irá me retornar um array com 
      * os tipos de users permitidos
      */
     const isAllowedUser = this.reflector.getAllAndOverride<UserType[]>(
-      ROLES_KEY, // essa chave foi definida no arquivo que foi importado acima, estou passando ela para dentro desta função do NestJS para relacionar os dadose esta função entender de qual role se trata pela chave passada
-      [context.getHandler(), context.getClass()], // Fazem parte do contexto de execução de um controlador ou interceptor do Nest.js. Basicamente ele irá intercptar meu request e deciidir se o código continua ou não
+      // ROLES_KEY -> essa chave foi definida no arquivo que foi importado acima, estou passando ela para dentro desta função do NestJS para relacionar os dados, 
+      // Que tipo de dados? os dados do tipo de usuário permitido para acessar as rotas para que esta função entenda de qual role se trata pela chave passada
+      ROLES_KEY,
+      [context.getHandler(), context.getClass()], // Fazem parte do contexto de execução de um controlador ou interceptor do Nest.js. Basicamente ele irá intercptar meu request e decidir se o código continua ou não
     );
 
     if (!isAllowedUser) {
@@ -39,7 +46,11 @@ export class RolesGuard implements CanActivate {
     // Receive the token set in the request
     const { authorization } = context.switchToHttp().getRequest().headers;
 
-    // Verify token
+    // Verifica se o token é válido
+    // loginPayload -> me retorna qual o usuario que está tentando acessar minha rota pelo id dele e retorna o type_user do usuário
+    // que é a informação pra identificar se o usuário é Admin, User ou Moderator cada um com privilégios diferentes
+    // ela retorna isso pq o token contém essas informaços armazenadas no payload dele ou no corpo dele, ele gravou essas informaçoes 
+    // assim que o usuário loga no sistema, veja a entidade AUTH que irá entender melhor 
     const loginPayload: LoginPayload | undefined = await this.jwtService
       .verifyAsync(authorization, {
         secret: process.env.JWT_SECRET,
@@ -47,7 +58,7 @@ export class RolesGuard implements CanActivate {
       .catch(() => undefined);
 
       /**
-       * Caso eu queira personalizar a saída de false do meu guards para que mostre uma msg mais exata para o client da minha API, 
+       * Caso eu queira personalizar a saída de false do meu guards para que mostre uma msg mais exata para o client da minha API,
        * posso usar o throw new UnauthorizedException(); e passar o objeto que achar melhor
        */
       if (!loginPayload) {
@@ -56,7 +67,7 @@ export class RolesGuard implements CanActivate {
         });
       }
 
-    return isAllowedUser.some((role) => role === loginPayload.type_user); // validação criada para verificar se o usuário tem permissão, some retorna um valor boolean. 
+    return isAllowedUser.some((role) => role === loginPayload.type_user); // validação criada para verificar se o usuário tem permissão, some retorna um valor boolean.
   }
 }
 
