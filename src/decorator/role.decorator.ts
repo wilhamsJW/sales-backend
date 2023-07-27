@@ -6,6 +6,10 @@ export const ROLES_KEY = 'roles';
 export const Roles = (...roles: UserType[]) => SetMetadata(ROLES_KEY, roles);
 
 /**
+ * Este aquivo se comunica de forma direta e automática com o roles.guards.ts, isso acontece por debaixo dos panos no nestJS
+ */
+
+/**
  * Pq que uso o operador spreed na função: (...roles: UserType[]) ??? Para que a função possa receber múltiplos arqgumentos e agrupalos há um só array
  * coloquei dois arqgumento lá no adress.controller para melhor entendimento
  * 
