@@ -6,6 +6,7 @@ import * as bcrypt from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { NotFoundException } from '@nestjs/common/exceptions';
+import { UserType } from './enum/user.type.num';
 
 
 @Injectable()
@@ -18,7 +19,7 @@ export class UserService {
 
     //private users: UserEntity[] = [] // isso aqui só feito para salvar em memória para testes
 
-    async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
+    async createUser(createUserDto: CreateUserDto, userType?: number): Promise<UserEntity> {
         // Foi adicionado esses dois pontos -> : após o parâmetro pq indica o que é que eu quero que essa função retorne, nesse caso quero retornar o User que
         // está na interface, porém não sei se isso vai retornar de fato, então o JS e o nest reconhece isso com uma Promise e pede pra usar
         // dessa forma: Promise<User> e assim para de apontar o erro dado de sintaxe
@@ -41,7 +42,7 @@ export class UserService {
             msg: 'User with sucess saved!',
             ...createUserDto,
             password: passwordHashed,
-            type_user: 1 // aqui define o tipo de user q terá acesso ou privliégios a acesar rotas dentro do projeto, está mockado para teste mas o dono do sistema q deve definir isso
+            type_user: userType ? userType : UserType.User, // aqui define o tipo de user q terá acesso ou privliégios a acesar rotas dentro do projeto, está mockado para teste mas o dono do sistema q deve definir isso
         })
     }
 
